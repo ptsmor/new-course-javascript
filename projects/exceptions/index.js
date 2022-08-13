@@ -118,42 +118,69 @@ function calculator(number = 0) {
 
   return {
     sum (...args) {
-      let result = number;
+      // первое решение
+      // let result = number;
 
-      for (const arg of args) {
-        result += arg; 
-      }
+      // for (const arg of args) {
+      //   result += arg; 
+      // }
+      // return result;
+
+      // второе решение
+      let result = args.reduce((sum, elem) =>
+      sum += elem, number);
       return result;
+
     },
     dif (...args) {
+      // первое решение
+      // let result = number;
 
-      let result = number;
+      // for (const arg of args) {
+      //   result -= arg;
+      // }
 
-      for (const arg of args) {
-        result -= arg;
-      }
+      // return result;
 
-      return result;
+            // второе решение
+            let result = args.reduce((dif, elem) =>
+            dif -= elem, number);
+            return result;
     },
     div(...args) {
-      let result = number;
-      for (const arg of args) {
-        if (arg === 0) {
-          throw new Error('division by 0');
-        }
-        result /= arg;
+            // первое решение
+      // let result = number;
+      // for (const arg of args) {
+      //   if (arg === 0) {
+      //     throw new Error('division by 0');
+      //   }
+      //   result /= arg;
+      // }
+      // return result;
+
+      // второе решение
+      let result = args.reduce(function(div, elem) {
+      if (elem === 0) {
+        throw new Error('division by 0');
       }
+      return div /= elem;
+    }, number);
       return result;
     },
     mul (...args) {
-      
-      let result = number;
+      // первое решение
+      // let result = number;
 
-      for (const arg of args) {
-        result *= arg;
-      }
+      // for (const arg of args) {
+      //   result *= arg;
+      // }
 
-      return result;
+      // return result;
+
+            // второе решение
+            let result = args.reduce((mul, elem) =>
+            mul *= elem, number);
+            return result;
     }
   }
 }
