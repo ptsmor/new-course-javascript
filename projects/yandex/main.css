@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.reviews {
+    max-height: 88px;
+    overflow-y: scroll;
+}
+.review {
+    
+    padding: 5x;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    font-size: 16px;
+line-height: 18px;
+}
+#add-btn{
+    font-weight: bold;
+font-size: 14px;
+padding: 9px 16px;
+background: #FF8663;
+border-radius: 3px;
+
+line-height: 16px;
+text-decoration: none;
+border: none;
+cursor: pointer;
+color: #FFFFFF;
+}
+input {
+    width: 310px;
+height: 38px;
+margin-bottom: 10px;
+border-radius: 3px;
+}
+textarea {
+    width: 310px;
+    height: 98px;
+    font-size: 14px;
+     line-height: 16px;
+     margin-bottom: 10px;
+     border-radius: 3px;
+}
+textarea:focus, input:focus{
+outline: 0;
+border: 1px solid #1371C8;
+} ::placeholder {color: #000000;}
