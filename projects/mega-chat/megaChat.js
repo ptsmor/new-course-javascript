@@ -1,3 +1,4 @@
+import './main.css';
 import LoginWindow from './ui/loginWindow';
 import MainWindow from './ui/mainWindow';
 import UserName from './ui/userName';
