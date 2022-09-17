@@ -6,7 +6,9 @@ import Controller from './controller';
 import Element from './elements';
 import DnD from './dnd';
 
-Model.login(51423341, 2)
+let vkKey = process.env.keyId
+
+Model.login(vkKey, 2)
   .then(function () {
     return Model.getUser({ name_case: 'gen' });
   })

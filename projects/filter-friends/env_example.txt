@@ -1,0 +1,3 @@
+vkKey="1111"
+для filter-friends
+в эту переменную в index.js нужен ключ из VKAPI
